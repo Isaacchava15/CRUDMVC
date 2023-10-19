@@ -1,18 +1,23 @@
 <?php 
-require_once 'controllers/error.php';
+require_once 'controllers/errores.php';
 
 class App{
 
     function __construct(){
-        echo "<p>Nueva app</p>";
+        //echo "<p>Nueva app</p>";
 
-        $url = $_GET['url']; //El parametro url esta definido en .htaccess
-        
-        $url = $_GET['url']; 
+        $url = isset($_GET['url']) ? $_GET['url']: null; //El parametro url esta definido en .htaccess
         $url =rtrim($url, '/'); //Elimina los / que no sean necesarios 
         $url = explode('/', $url); // Divide cada parametro que se ingresa con un /
 
-        //var_dump($url); //Imprime el array que se crea con lo que esta ente /
+        if(empty($url[0])){
+            $archivoController = 'controllers/main.php';
+            require_once $archivoController;
+            $controller = new Main();
+            //$controller->loadModel('main');
+            return false;
+        }
+        
         $archivoController = 'controllers/' . $url[0] . '.php'; // Llama al controlador que este en la posicion 0 de la url, o sea la primer /
 
         if(file_exists($archivoController)){
