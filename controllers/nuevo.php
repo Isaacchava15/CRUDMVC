@@ -7,6 +7,13 @@
         $this->view->render('nuevo/index'); //Llama el metodo render cargando la vista de main
         //echo "<p>Nuevo controlador Main</p>";
     }
+
+    function registrarAlumno(){
+        echo 'Alumno creado';
+        $this->model->insert();
+    }
+
+
    
  }
 

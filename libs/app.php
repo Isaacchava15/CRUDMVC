@@ -14,7 +14,7 @@ class App{
             $archivoController = 'controllers/main.php';
             require_once $archivoController;
             $controller = new Main();
-            //$controller->loadModel('main');
+            $controller->loadModel('main');
             return false;
         }
         
@@ -23,6 +23,7 @@ class App{
         if(file_exists($archivoController)){
             require_once $archivoController; //Llama lo que creamos arriba
             $controller = new $url[0];
+            $controller->loadModel($url[0]);
 
             if(isset($url[1])){
                 $controller->{$url[1]}();//Define la posicion de la url que se valora, en este ejemplo solo se valoran las primeras 3 /0/1/2 de ahi en adelante no toma en cuenta lo que se escriba.
