@@ -10,7 +10,7 @@
     <?php require 'views/header.php'; ?>
 
     <div id="main">
-        <h1 class="center">Sección de Nuevo</h1>
+        <h1 class="center">Nuevo Estudiante</h1>
 
         <div class="center"><?php echo $this->mensaje; ?></div>
 
@@ -27,6 +27,24 @@
             <p>
                 <label for="apellido">Apellido</label><br>
                 <input type="text" name="apellido" id="" required>
+            </p>
+
+            <p>
+                <label for="cedula">Cedula</label><br>
+                <input type="text" name="cedula" id="" required>
+            </p>
+            <p>
+                <label for="telefono">Telefono</label><br>
+                <input type="text" name="telefono" id="" required>
+            </p>
+            <p>
+                <label for="familiar">Nombre de un familiar</label><br>
+                <input type="text" name="familiar" id="" required>
+            </p>
+            
+            <p>
+                <label for="telFamiliar">Telefono de un familiar</label><br>
+                <input type="text" name="telFamiliar" id="" required>
             </p>
 
             <p>

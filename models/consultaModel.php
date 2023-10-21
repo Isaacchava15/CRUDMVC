@@ -22,6 +22,10 @@ class ConsultaModel extends Model
                 $item->matricula = $row['Matricula']; //Se asigna las variables de la clase alumno junto con las filas de la bd
                 $item->nombre = $row['Nombre'];
                 $item->apellido = $row['Apellido'];
+                $item->cedula = $row['cedula'];
+                $item->telefono = $row['telefono'];
+                $item->familiar = $row['familiar'];
+                $item->telFamiliar = $row['telFamiliar'];
 
                 //array_push permite ingresar un nuevo valor a un arreglo
                 array_push($items, $item); //Esta metiendo los datos de item al arreglo vacio llamado items.
@@ -46,6 +50,10 @@ class ConsultaModel extends Model
                 $item->matricula = $row['Matricula'];
                 $item->nombre = $row['Nombre'];
                 $item->apellido = $row['Apellido'];
+                $item->cedula = $row['Cedula'];
+                $item->telefono = $row['Telefono'];
+                $item->familiar = $row['Familiar'];
+                $item->telFamiliar = $row['telFamiliar'];
             }
 
             return $item;
@@ -58,12 +66,16 @@ class ConsultaModel extends Model
     public function update($item)
     {
 
-        $query = $this->db->connect()->prepare("UPDATE alumnos SET nombre = :nombre, apellido = :apellido WHERE matricula = :matricula");
+        $query = $this->db->connect()->prepare("UPDATE alumnos SET nombre = :nombre, apellido = :apellido, cedula = :cedula, telefono = :telefono, familiar = :familiar, telFamiliar = :telFamiliar WHERE matricula = :matricula");
         try {
             $query->execute([
                 "matricula" => $item["matricula"],
                 "nombre" => $item["nombre"],
                 "apellido" => $item["apellido"],
+                "cedula" => $item['Cedula'],
+                "telefono" => $item['Telefono'],
+                "familiar" => $item['Familiar'],
+                "telFamiliar" => $item['telFamiliar'],
             ]);
             return true;
 

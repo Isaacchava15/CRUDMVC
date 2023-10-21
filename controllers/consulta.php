@@ -38,15 +38,23 @@ class Consulta extends Controller
         $matricula = $_SESSION['id_verAlumno'];
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
+        $cedula = $_POST['cedula'];
+        $telefono = $_POST['telefono'];
+        $familiar = $_POST['familiar'];
+        $telFamiliar = $_POST['telFamiliar'];
 
         unset($_SESSION['id_verAlumno']);
 
-        if ($this->model->update(['matricula' => $matricula, 'nombre' => $nombre, 'apellido' => $apellido])) {
+        if ($this->model->update(['matricula' => $matricula, 'nombre' => $nombre, 'apellido' => $apellido, 'cedula' => $cedula, 'telefono' => $telefono, 'familiar' => $familiar, 'telFamiliar' => $telFamiliar])) {
             // actualizar alumno exito
             $alumno = new Alumno();
             $alumno->matricula = $matricula;
             $alumno->nombre = $nombre;
             $alumno->apellido = $apellido;
+            $alumno->cedula = $cedula;
+            $alumno->telefono = $telefono;
+            $alumno->familiar = $familiar;
+            $alumno->telFamiliar = $telFamiliar;
 
             $this->view->alumno = $alumno;
             $this->view->mensaje = "Alumno actualizado correctamente";

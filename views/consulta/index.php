@@ -10,14 +10,24 @@
     <?php require 'views/header.php'; ?>
 
     <div id="main">
-        <h1 class="center">Seccion de consulta</h1>
+        <h1 class="center">Lista de estudiantes</h1>
         <div id="respuesta" class="center"></div>
         <table width=100%>
             <thead>
                 <tr>
                     <th>Matricula</th>
+                    <th></th>
                     <th>Nombre</th>
+                    <th></th>
                     <th>Apellido</th>
+                    <th></th>
+                    <th>Cedula</th>
+                    <th></th>
+                    <th>Telefono</th>
+                    <th></th>
+                    <th>Nombre de Familiar</th>
+                    <th></th>
+                    <th>Telefono de Familiar</th>
                 </tr>
             </thead>
             <tbody id="tbody-alumnos">
@@ -29,11 +39,22 @@
              ?> 
                 <tr id="fila-<?php echo $alumno->matricula; ?>">
                     <td><?php echo $alumno->matricula; ?></td>
+                    <th></th>
                     <td><?php echo $alumno->nombre; ?></td>
+                    <th></th>
                     <td><?php echo $alumno->apellido; ?></td>
+                    <th></th>
+                    <td><?php echo $alumno->cedula; ?></td>
+                    <th></th>
+                    <td><?php echo $alumno->telefono; ?></td>
+                    <th></th>
+                    <td><?php echo $alumno->familiar; ?></td>
+                    <th></th>
+                    <td><?php echo $alumno->telFamiliar; ?></td>
+                    <th></th>
                     <td><button class="bEliminar" data-matricula="<?php echo $alumno->matricula; ?>">eliminar</button></td>
                     <td><a href="<?php echo constant('URL') . 'consulta/verAlumno/' . $alumno->matricula;?>">Editar</a></td>
-                    <td><a href="<?php echo constant('URL') . 'consulta/eliminarAlumno/' . $alumno->matricula;?>">Eliminar</a></td>
+                    
                 </tr>
 
                 <?php }  ?>

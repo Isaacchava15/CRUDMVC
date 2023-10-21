@@ -17,13 +17,18 @@ class Nuevo extends Controller{
         $matricula = $_POST['matricula'];
         $nombre    = $_POST['nombre'];
         $apellido  = $_POST['apellido'];
+        $cedula  = $_POST['cedula'];
+        $telefono  = $_POST['telefono'];
+        $familiar = $_POST['familiar'];
+        $telFamiliar = $_POST['telFamiliar'];
+        
 
         $mensaje = "";
 
-        if($this->model->insert(['matricula' => $matricula, 'nombre' => $nombre, 'apellido' => $apellido])){
+        if($this->model->insert(['matricula' => $matricula, 'nombre' => $nombre, 'apellido' => $apellido, 'cedula' => $cedula, 'telefono' => $telefono, 'familiar' => $familiar, 'telFamiliar' => $telFamiliar])){
             $mensaje = "Nuevo alumno creado";
         }else{
-            $mensaje = "La matrícula ya existe";
+            $mensaje = "ERROR: La matrícula ya existe";
         }
 
         $this->view->mensaje = $mensaje;

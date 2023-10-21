@@ -28,6 +28,22 @@
                 <label for="apellido">Apellido</label><br>
                 <input type="text" name="apellido" value="<?php echo $this->alumno->apellido;  ?>" required>
             </p>
+            <p>
+                <label for="cedula">Cedula</label><br>
+                <input type="text" name="cedula" value="<?php echo $this->alumno->cedula;  ?>" required>
+            </p>
+            <p>
+                <label for="telefono">Telefono</label><br>
+                <input type="text" name="telefono" value="<?php echo $this->alumno->telefono;  ?>" required>
+            </p>
+            <p>
+                <label for="familiar">Nombre de un Familiar</label><br>
+                <input type="text" name="familiar" value="<?php echo $this->alumno->familiar;  ?>" required>
+            </p>
+            <p>
+                <label for="telFamiliar">Telefono de un Familiar</label><br>
+                <input type="text" name="telFamiliar" value="<?php echo $this->alumno->telFamiliar;  ?>" required>
+            </p>
 
             <p>
             <input type="submit" value="Actualizar alumno">
