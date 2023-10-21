@@ -1,3 +1,3 @@
 <div id="footer">
-© Proyecto 2023
+© Proyecto Edward Arce Alias Curiosity 2023
 </div>
