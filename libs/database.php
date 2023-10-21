@@ -1,6 +1,7 @@
 <?php
 
 class Database{
+
     private $host;
     private $db;
     private $user;
@@ -15,11 +16,10 @@ class Database{
         $this->charset = constant('CHARSET');
     }
 
-
     function connect(){
         try{
             $connection = "mysql:host=" . $this->host . ";dbname=" . $this->db . ";charset=" . $this->charset;
-            $options = [ //Estas options son para descripcion de errores.
+            $options = [
                 PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_EMULATE_PREPARES   => false,
             ];
@@ -30,10 +30,7 @@ class Database{
         }catch(PDOException $e){
             print_r('Error connection: ' . $e->getMessage());
         }
-    
-    
     }
-
 
 }
 
