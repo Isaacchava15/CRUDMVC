@@ -12,6 +12,8 @@
     <div id="main">
         <h1 class="center">Sección de Nuevo</h1>
 
+        <div class="center"><?php echo $this->mensaje; ?></div>
+
         <form action="<?php echo constant('URL'); ?>nuevo/registrarAlumno" method="POST">
 
             <p>

@@ -4,11 +4,17 @@
 
     function __construct(){
         parent::__construct(); //Se llama al constructor heredado.
-        $this->view->render('consulta/index'); //Llama el metodo render cargando la vista de main
-        //echo "<p>Nuevo controlador Main</p>";
+        $this->view->alumnos = [];
     }
 
-   
+    function render(){
+        //Estas dos lineas siguientes lo que hacen es traer la lista de alumnos
+        $alumnos = $this->model->get();
+        $this->view->alumnos = $alumnos; 
+
+        $this->view->render('consulta/index'); //Llama el metodo render cargando la vista de consulta
+
+    }
  }
 
 ?>
