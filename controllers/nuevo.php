@@ -18,17 +18,16 @@ class Nuevo extends Controller{
         $nombre    = $_POST['nombre'];
         $apellido  = $_POST['apellido'];
 
-        $mensaje ="";
+        $mensaje = "";
 
         if($this->model->insert(['matricula' => $matricula, 'nombre' => $nombre, 'apellido' => $apellido])){
             $mensaje = "Nuevo alumno creado";
         }else{
-            $mensaje = "La matricula ya existe";
+            $mensaje = "La matrícula ya existe";
         }
 
         $this->view->mensaje = $mensaje;
         $this->render();
-        
     }
 }
 

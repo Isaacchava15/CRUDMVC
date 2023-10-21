@@ -30,13 +30,22 @@ class App{
             $controller = new $url[0];
             $controller->loadModel($url[0]);
 
-            //Si hay un metodo que se requiere cargar
-            if(isset($url[1])){
-                $controller->{$url[1]}();//Define la posicion de la url que se valora, en este ejemplo solo se valoran las primeras 3 /0/1/2 de ahi en adelante no toma en cuenta lo que se escriba.
-            }else{
-                $controller->render(); // Se llama el render aqui porque si se tuviera que llamar un metodo, ya ese metodo trae un render, este carga solo en caso de que no tenga render
-            }
+            //Contiene el numero de elementos del arreglo
+            $nparam = sizeof($url);
 
+            if($nparam > 1){ //Este if valida la cantidad de parametros que tenemos en nuestra URL.
+                if ($nparam > 2) {
+                    $param = [];
+                    for($i = 2; $i<$nparam; $i++){
+                        array_push($param, $url[$i]);
+                    }
+                    $controller->{$url[1]}($param);
+                }else{
+                    $controller->{$url[1]}();//Define la posicion de la url que se valora, en este ejemplo solo se valoran las primeras 3 /0/1/2 de ahi en adelante no toma en cuenta lo que se escriba.
+                }
+            }else{
+                $controller->render();
+            }
         }else{
             $controller = new Errores();
         }
