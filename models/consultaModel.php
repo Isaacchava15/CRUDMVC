@@ -50,9 +50,9 @@ class ConsultaModel extends Model
                 $item->matricula = $row['Matricula'];
                 $item->nombre = $row['Nombre'];
                 $item->apellido = $row['Apellido'];
-                $item->cedula = $row['Cedula'];
-                $item->telefono = $row['Telefono'];
-                $item->familiar = $row['Familiar'];
+                $item->cedula = $row['cedula'];
+                $item->telefono = $row['telefono'];
+                $item->familiar = $row['familiar'];
                 $item->telFamiliar = $row['telFamiliar'];
             }
 

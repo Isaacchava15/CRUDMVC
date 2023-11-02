@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php require 'views/header.php'; ?>
 
     <div id="main">
         <h1 class="center">Detalle de alumno <?php echo $this->alumno->matricula; ?></h1>
@@ -50,6 +49,9 @@
             </p>
 
         </form>
+        <p>
+            <a href="../../consulta" class="btn btn-secondary btn-lg">Regresar</a>
+        </p>
     </div>
 
     <?php require 'views/footer.php'; ?>

@@ -1,59 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
+
+<body style="background-color: #252422;">
     <?php require 'views/header.php'; ?>
-
-    <div id="main">
-        <h1 class="center">Nuevo Estudiante</h1>
-
-        <div class="center"><?php echo $this->mensaje; ?></div>
+    <br>
+    <h1 class="background-color: #252422 p-2 text-white text-center">Nuevo Estudiante</h1>
+    <br>
+    <div class="container">
 
         <form action="<?php echo constant('URL'); ?>nuevo/registrarAlumno" method="POST">
 
-            <p>
-                <label for="matricula">Matrícula</label><br>
-                <input type="text" name="matricula" id="" required>
-            </p>
-            <p>
-                <label for="nombre">Nombre</label><br>
-                <input type="text" name="nombre" id="" required>
-            </p>
-            <p>
-                <label for="apellido">Apellido</label><br>
-                <input type="text" name="apellido" id="" required>
-            </p>
+
+            <div class="row">
+                <div class="col">
+                <label for="formGroupExampleInput" class="form-label" style="color:white">Nombre</label>
+                <input type="text" class="form-control" id="formGroupExampleInput"
+                    placeholder="ej. Edward" name="nombre">
+                </div>
+                <div class="col">
+                <label for="formGroupExampleInput" class="form-label" style="color:white">Apellidos</label>
+                <input type="text" class="form-control" id="formGroupExampleInput"
+                    placeholder="ej. Arce Jimenez" name="apellido">
+                </div>
+            </div>
+
+            <br>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label" style="color:white">Código de matrícula</label>
+                <input type="text" class="form-control" id="formGroupExampleInput"
+                    placeholder="ej. A2215448" name="matricula">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label" style="color:white">Cédula</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2"
+                    placeholder="ej. 117460066" name="cedula">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label" style="color:white">Teléfono</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2"
+                    placeholder="ej. 87451236" name="telefono">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label" style="color:white">Nombre de un familiar</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2"
+                    placeholder="ej. María Jimenez Acosta" name="familiar">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label" style="color:white">Teléfono de familiar</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2"
+                    placeholder="ej. 87451236" name="telFamiliar"> 
+            </div>
+
+
 
             <p>
-                <label for="cedula">Cedula</label><br>
-                <input type="text" name="cedula" id="" required>
-            </p>
-            <p>
-                <label for="telefono">Telefono</label><br>
-                <input type="text" name="telefono" id="" required>
-            </p>
-            <p>
-                <label for="familiar">Nombre de un familiar</label><br>
-                <input type="text" name="familiar" id="" required>
-            </p>
-            
-            <p>
-                <label for="telFamiliar">Telefono de un familiar</label><br>
-                <input type="text" name="telFamiliar" id="" required>
-            </p>
-
-            <p>
-            <input type="submit" value="Registrar nuevo alumno">
+                <input type="submit" class="btn btn-success btn-lg" style="color: #fbfaff;" value="Registrar">
+                <a href="main" class="btn btn-secondary btn-lg">Regresar</a>
             </p>
 
         </form>
     </div>
-
     <?php require 'views/footer.php'; ?>
+
+
 </body>
+
 </html>
