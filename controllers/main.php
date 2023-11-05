@@ -12,9 +12,6 @@
         $this->view->render('main/index'); //Llama el metodo render cargando la vista de main
     }
 
-    function saludo(){
-        echo "<p>Metodo saludo ejecutado</p>";
-    }
 
    
  }

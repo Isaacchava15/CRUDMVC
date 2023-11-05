@@ -8,8 +8,13 @@
     <link rel="stylesheet" href= "<?php echo constant('URL') ?>public/css/default.css">
 </head>
 
-    <div id="footer" style="">
+    <div id="footer" style=" text-align: center;
+    background-color: #1b2021;
+    color: white;
+    height: 30px;
+    ">
         © Proyecto Edward Arce Alias Curiosity 2023
+        
     </div>
 
 

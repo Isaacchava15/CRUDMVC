@@ -72,9 +72,9 @@ class ConsultaModel extends Model
                 "matricula" => $item["matricula"],
                 "nombre" => $item["nombre"],
                 "apellido" => $item["apellido"],
-                "cedula" => $item['Cedula'],
-                "telefono" => $item['Telefono'],
-                "familiar" => $item['Familiar'],
+                "cedula" => $item['cedula'],
+                "telefono" => $item['telefono'],
+                "familiar" => $item['familiar'],
                 "telFamiliar" => $item['telFamiliar'],
             ]);
             return true;

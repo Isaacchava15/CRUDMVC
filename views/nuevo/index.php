@@ -9,10 +9,19 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<body style="background-color: #252422;">
-    <?php require 'views/header.php'; ?>
+<body style="background-color: #212529;">
+
     <br>
-    <h1 class="background-color: #252422 p-2 text-white text-center">Nuevo Estudiante</h1>
+    <div class="container">
+        <h1 class="text-center" style="background-color: #212529; color:white; border-radius: 5px;">Nuevo Estudiante
+        </h1>
+    </div>
+
+    <div class="center">
+            
+                <p class="fs-5"> <?php echo $this->mensaje; ?> </p> 
+            
+        </div>
     <br>
     <div class="container">
 
@@ -21,14 +30,14 @@
 
             <div class="row">
                 <div class="col">
-                <label for="formGroupExampleInput" class="form-label" style="color:white">Nombre</label>
-                <input type="text" class="form-control" id="formGroupExampleInput"
-                    placeholder="ej. Edward" name="nombre">
+                    <label for="formGroupExampleInput" class="form-label" style="color:white">Nombre</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ej. Edward"
+                        name="nombre">
                 </div>
                 <div class="col">
-                <label for="formGroupExampleInput" class="form-label" style="color:white">Apellidos</label>
-                <input type="text" class="form-control" id="formGroupExampleInput"
-                    placeholder="ej. Arce Jimenez" name="apellido">
+                    <label for="formGroupExampleInput" class="form-label" style="color:white">Apellidos</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ej. Arce Jimenez"
+                        name="apellido">
                 </div>
             </div>
 
@@ -36,19 +45,19 @@
 
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label" style="color:white">Código de matrícula</label>
-                <input type="text" class="form-control" id="formGroupExampleInput"
-                    placeholder="ej. A2215448" name="matricula">
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ej. A2215448"
+                    name="matricula">
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label" style="color:white">Cédula</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2"
-                    placeholder="ej. 117460066" name="cedula">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ej. 117460066"
+                    name="cedula">
             </div>
 
             <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label" style="color:white">Teléfono</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2"
-                    placeholder="ej. 87451236" name="telefono">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ej. 87451236"
+                    name="telefono">
             </div>
 
             <div class="mb-3">
@@ -59,15 +68,15 @@
 
             <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label" style="color:white">Teléfono de familiar</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2"
-                    placeholder="ej. 87451236" name="telFamiliar"> 
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ej. 87451236"
+                    name="telFamiliar">
             </div>
 
 
 
             <p>
                 <input type="submit" class="btn btn-success btn-lg" style="color: #fbfaff;" value="Registrar">
-                <a href="main" class="btn btn-secondary btn-lg">Regresar</a>
+                <a href="http://localhost/cursoMVC/main" class="btn btn-secondary btn-lg">Regresar</a>
             </p>
 
         </form>

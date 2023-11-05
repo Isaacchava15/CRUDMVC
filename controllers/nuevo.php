@@ -26,9 +26,10 @@ class Nuevo extends Controller{
         $mensaje = "";
 
         if($this->model->insert(['matricula' => $matricula, 'nombre' => $nombre, 'apellido' => $apellido, 'cedula' => $cedula, 'telefono' => $telefono, 'familiar' => $familiar, 'telFamiliar' => $telFamiliar])){
-            $mensaje = "Nuevo alumno creado";
+            $mensaje = "Nuevo alumno creado ✔";
+            
         }else{
-            $mensaje = "ERROR: La matrícula ya existe";
+            $mensaje = "ERROR: La matrícula ya existe X";
         }
 
         $this->view->mensaje = $mensaje;

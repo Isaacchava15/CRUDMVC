@@ -57,10 +57,10 @@ class Consulta extends Controller
             $alumno->telFamiliar = $telFamiliar;
 
             $this->view->alumno = $alumno;
-            $this->view->mensaje = "Alumno actualizado correctamente";
+            $this->view->mensaje = "Alumno actualizado correctamente ✔";
         } else {
             // mensaje de error
-            $this->view->mensaje = "No se pudo actualizar el alumno";
+            $this->view->mensaje = "No se pudo actualizar el alumno X";
         }
         $this->view->render('consulta/detalle');
 
@@ -72,11 +72,11 @@ class Consulta extends Controller
         if ($this->model->delete($matricula)) {
             // Eliminar alumno exito
                       
-            $mensaje = "Alumno eliminado correctamente";
+            $mensaje = "Alumno eliminado correctamente ✔";
         } else {
             // mensaje de error
 
-            $mensaje = "No se pudo eliminar el alumno";
+            $mensaje = "No se pudo eliminar el alumno X";
         }
         //$this->render();
 

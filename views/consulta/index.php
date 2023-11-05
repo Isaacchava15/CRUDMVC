@@ -1,35 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto de Programación</title>
+    <!-- Decidí usar Boostrap para apoyarme con la estructura HTML y el CSS?> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color: #212529;">
     <?php require 'views/header.php'; ?>
-
-    <div id="main">
-        <h1 class="center">Lista de estudiantes</h1>
-        <div id="respuesta" class="center"></div>
-        <table width=100%>
-            <thead>
+    <br>
+    <div class="container">
+        <h1 class="text-center" style="background-color: #212529; color:white; border-radius: 5px;">Lista de Estudiantes
+        </h1>
+    </div>
+    <br>
+    
+    <div class="container">
+        <table class="table table-dark table-striped">
+            <thead class="table-dark">
                 <tr>
-                    <th>Matricula</th>
-                    <th></th>
-                    <th>Nombre</th>
-                    <th></th>
-                    <th>Apellido</th>
-                    <th></th>
-                    <th>Cedula</th>
-                    <th></th>
-                    <th>Telefono</th>
-                    <th></th>
-                    <th>Nombre de Familiar</th>
-                    <th></th>
-                    <th>Telefono de Familiar</th>
+                    <th scope="col">Matricula</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Cedula</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Nombre de Familiar</th>
+                    <th scope="col">Telefono de Familiar</th>
+                    <th scope="col">Opciones</th>
                 </tr>
             </thead>
             <tbody id="tbody-alumnos">
@@ -43,36 +44,31 @@
                         <td>
                             <?php echo $alumno->matricula; ?>
                         </td>
-                        <th></th>
                         <td>
                             <?php echo $alumno->nombre; ?>
                         </td>
-                        <th></th>
                         <td>
                             <?php echo $alumno->apellido; ?>
                         </td>
-                        <th></th>
                         <td>
                             <?php echo $alumno->cedula; ?>
                         </td>
-                        <th></th>
                         <td>
                             <?php echo $alumno->telefono; ?>
                         </td>
-                        <th></th>
                         <td>
                             <?php echo $alumno->familiar; ?>
                         </td>
-                        <th></th>
                         <td>
                             <?php echo $alumno->telFamiliar; ?>
                         </td>
-                        <th></th>
-                        <td><button class="bEliminar" data-matricula="<?php echo $alumno->matricula; ?>">eliminar</button>
-                        </td>
-                        <td><a href="<?php echo constant('URL') . 'consulta/verAlumno/' . $alumno->matricula; ?>">Editar</a>
-                        </td>
 
+                        <th>
+                            <a class="btn btn-outline-warning"
+                                href="<?php echo constant('URL') . 'consulta/verAlumno/' . $alumno->matricula; ?>">Editar</a>
+                            <button class="bEliminar btn btn-outline-danger"
+                                data-matricula="<?php echo $alumno->matricula; ?>">Eliminar</button>
+                        </th>
                     </tr>
 
                 <?php } ?>
@@ -80,7 +76,7 @@
         </table>
 
         <p>
-            <a href="main" class="btn btn-secondary btn-lg">Regresar</a>
+            <a href="http://localhost/cursoMVC/" class="btn btn-secondary btn-lg">Regresar</a>
         </p>
     </div>
 

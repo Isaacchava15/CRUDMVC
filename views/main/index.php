@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-color: #212529;">
     <?php require 'views/header.php'; ?>
 
     <div id="main" style="position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%);">
@@ -16,8 +16,8 @@
         <h2 class="center">Edward Arce</h2>
         <br><br><br>
         <div class="d-grid gap-2">
-            <a href="nuevo" class="btn btn-primary btn-lg" style="color: #141a35; background-color: #b0d5ff;">Nueva Matrícula</a>
-            <a href="consulta" class="btn btn-secondary btn-lg" style="color: #141a35; background-color: #e2e2e2;">Consultar Matrículas</a>
+            <a href="nuevo" class="btn  btn-lg" style="color: #141a35; background-color: #e09f3e;">Nueva Matrícula</a>
+            <a href="consulta" class="btn btn-lg" style="color: #141a35; background-color: #fff3b0;">Consultar Matrículas</a>
         </div>
     </div>
 
