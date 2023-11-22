@@ -4,6 +4,12 @@
 
 -- En XAMPP correr Apache y MySQL
 
+-- Ingresar a http://localhost/phpmyadmin/ 
+
+-- Ir a la parte que dice SQL y pegar todo lo que viene en el archivo "progra.sql" y darle a continuar. De esta forma la base de datos ya se encuentra creada.
+
 -- En el navegador correr localhost/crudmvc 
 
--- En este punto no hay interfaz por lo que solo debería de verse esto: ![image](https://github.com/Isaacchava15/CRUDMVC/assets/56938444/911d1454-c001-4a18-932d-ceafc8bebb3b)
+-- A este punto el programa funciona correctamente, se puede crear un nuevo estudiante, editarlo y eliminarlo, asi como también consultar la lista entera de alumnos.
+
+-- Al probarlo se puede ingresar a la base de datos en http://localhost/phpmyadmin/index.php?route=/database/structure&db=progra y ver que los campos que hemos creado, editado o eliminado, también se ven reflejados aquí.
