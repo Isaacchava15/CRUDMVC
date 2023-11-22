@@ -9,11 +9,16 @@
 </head>
 
     <div id="footer" style=" text-align: center;
-    background-color: #1b2021;
-    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: 30px;
+    background-color: #1d1c1b;
+    color: white;
+}
     ">
-        © Proyecto Edward Arce Alias Curiosity 2023
+        © Proyecto Edward Arce, Programación Avanzada 2023
         
     </div>
 
