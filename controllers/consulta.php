@@ -57,7 +57,11 @@ class Consulta extends Controller
             $alumno->telFamiliar = $telFamiliar;
 
             $this->view->alumno = $alumno;
-            $this->view->mensaje = "Alumno actualizado correctamente ✔";
+
+            $mensaje3 = "echo <p style='text-align: center;
+            color: white;'> Alumno actualizado correctamente ✔ </p>";
+
+            $this->view->mensaje = $mensaje3;
         } else {
             // mensaje de error
             $this->view->mensaje = "No se pudo actualizar el alumno X";
